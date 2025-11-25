@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { navLinks, personalInfo } from '../../data/placeholderData';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +38,7 @@ export default function Header() {
           {/* Logo */}
           <a
             href="/"
-            className="text-xl font-normal text-[var(--color-text)] hover:opacity-70 transition-opacity focus:outline-none rounded"
+            className="text-xl font-normal text-[var(--color-text)] hover:opacity-70 transition-opacity focus:outline-none rounded mr-12"
             aria-label="Home"
           >
             {personalInfo.name}
@@ -57,7 +56,6 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-            <ThemeToggle />
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
@@ -69,7 +67,6 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
-            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"

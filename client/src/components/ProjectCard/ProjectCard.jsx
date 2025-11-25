@@ -10,11 +10,6 @@ export default function ProjectCard({ project, index }) {
       whileHover={{ y: -5 }}
       className="card h-full flex flex-col"
     >
-      <div className="aspect-video bg-neutral-200 dark:bg-neutral-800 rounded-lg mb-4 overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center text-[var(--color-text-muted)]">
-          <span>Project Image</span>
-        </div>
-      </div>
       <h3 className="text-xl font-normal mb-2">{project.title}</h3>
       <p className="text-[var(--color-text-muted)] mb-4 flex-grow leading-relaxed">
         {project.description}

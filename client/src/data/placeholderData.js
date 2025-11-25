@@ -60,7 +60,7 @@ export const projects = [
     title: "Minus1to0 Learning Platform",
     description:
       "Full-stack platform that helps learners go from \"minus one\" to job-ready DSA mastery. Includes a React SPA, Node/Express API, PostgreSQL data layer, resume builder with LaTeX templates, mentorship services, mock interviews, and a public leaderboard.",
-    image: "/placeholder-project-4.jpg",
+    image: "/minus1to0.png",
     technologies: [
       "React 18",
       "React Router",
