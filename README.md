@@ -213,18 +213,13 @@ The Express server can serve the built React frontend, so you can deploy everyth
 2. In Render, create a new **Web Service**.
 3. Select the repository and use these settings:
    - **Root directory:** `/` (repo root)
-   - **Build Command:**  
-     ```
-     npm install && npm run build && cd server && npm install
-     ```
-     This installs root deps, builds the client (`client/dist`), then installs backend deps.
-   - **Start Command:**  
-     ```
-     cd server && npm start
-     ```
+   - **Build Command:** `npm run build`
+   - **Start Command:** `npm start`
 4. Set environment variables from `.env.example` (PORT optional; Render sets `PORT` automatically).
 5. Add `CONTACT_EMAIL`, SMTP credentials, and any other secrets in the Render dashboard.
 6. Upload `server/public/resume.pdf` to the repo before deploying so it’s bundled.
+
+`npm run build` runs `npm run install:client && npm run install:server && npm run build:client`, ensuring the Vite build completes before Express starts. `npm start` launches `node server/index.js`, which serves both the API and the built client.
 
 Render automatically provides `NODE_ENV=production`. When the service starts it serves:
 - API endpoints under `/api`
@@ -354,7 +349,7 @@ cd server && cp .env.example .env
 npm run dev:all
 
 # 6. Build for production
-npm run build:client
+npm run build
 ```
 
 ---

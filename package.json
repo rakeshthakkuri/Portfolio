@@ -4,13 +4,16 @@
   "description": "Clean, minimal portfolio website with React frontend and Node.js backend",
   "private": true,
   "scripts": {
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "build:client": "cd client && npm run build",
+    "build": "npm run install:client && npm run install:server && npm run build:client",
+    "start": "node server/index.js",
     "dev:client": "cd client && npm run dev",
     "dev:server": "cd server && npm run dev",
     "dev:all": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "build:client": "cd client && npm run build",
-    "build": "npm run build:client",
     "start:server": "cd server && npm start",
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+    "install:all": "npm install && npm run install:client && npm run install:server"
   },
   "keywords": ["portfolio", "react", "nodejs", "express"],
   "author": "",
