@@ -9,12 +9,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2563eb',
-          dark: '#1d4ed8',
+          DEFAULT: '#000000',
+          dark: '#000000',
         },
         accent: {
-          DEFAULT: '#7c3aed',
-          dark: '#6d28d9',
+          DEFAULT: '#000000',
+          dark: '#000000',
         },
         neutral: {
           50: '#fafafa',
@@ -27,11 +27,11 @@ export default {
           700: '#404040',
           800: '#262626',
           900: '#171717',
-          950: '#0f1724',
+          950: '#0a0a0a',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
       },
       fontSize: {
         'h1-mobile': ['28px', { lineHeight: '1.2', letterSpacing: '-0.02em' }],

@@ -38,25 +38,14 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            {/* Greeting */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-primary font-medium mb-4"
-            >
-              Hi, my name is
-            </motion.p>
-
             {/* Name */}
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-normal mb-6"
             >
-              {personalInfo.name.split(' ')[0]}{' '}
-              <span className="text-primary">{personalInfo.name.split(' ')[1]}</span>
+              {personalInfo.name}
             </motion.h1>
 
             {/* Title */}
@@ -64,7 +53,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[var(--color-text-muted)] mb-6"
+              className="text-lg md:text-xl text-[var(--color-text-muted)] mb-8"
             >
               {personalInfo.title}
             </motion.p>

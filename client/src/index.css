@@ -5,62 +5,64 @@
 @layer base {
   :root {
     --color-bg: #ffffff;
-    --color-text: #171717;
-    --color-text-muted: #525252;
+    --color-text: #000000;
+    --color-text-muted: #666666;
     --color-border: #e5e5e5;
     --color-surface: #fafafa;
   }
 
   .dark {
-    --color-bg: #0f1724;
-    --color-text: #fafafa;
-    --color-text-muted: #a3a3a3;
-    --color-border: #262626;
-    --color-surface: #171717;
+    --color-bg: #0a0a0a;
+    --color-text: #ffffff;
+    --color-text-muted: #999999;
+    --color-border: #333333;
+    --color-surface: #1a1a1a;
   }
 
   body {
     @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans antialiased;
+    font-weight: 400;
+    line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-normal tracking-normal;
   }
 
   h1 {
-    @apply text-h1-mobile lg:text-h1-desktop;
+    @apply text-4xl md:text-5xl lg:text-6xl font-normal;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-2xl md:text-3xl lg:text-4xl font-normal;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl md:text-2xl font-normal;
   }
 }
 
 @layer components {
   .container-custom {
     @apply mx-auto px-4 sm:px-6 lg:px-8;
-    max-width: 1200px;
+    max-width: 800px;
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-16;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white bg-primary hover:bg-primary-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-neutral-950 min-h-[44px] min-w-[44px];
+    @apply inline-flex items-center justify-center px-4 py-2 font-normal text-white bg-black hover:bg-neutral-900 transition-colors duration-200 focus:outline-none min-h-[44px] min-w-[44px];
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-[var(--color-text)] bg-transparent border-2 border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-neutral-950 min-h-[44px] min-w-[44px];
+    @apply inline-flex items-center justify-center px-4 py-2 font-normal text-[var(--color-text)] bg-transparent border border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors duration-200 focus:outline-none min-h-[44px] min-w-[44px];
   }
 
   .card {
-    @apply bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 transition-shadow duration-200 hover:shadow-lg;
+    @apply bg-transparent border-b border-[var(--color-border)] pb-6 mb-6 transition-colors duration-200;
   }
 }
 

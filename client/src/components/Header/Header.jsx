@@ -39,7 +39,7 @@ export default function Header() {
           {/* Logo */}
           <a
             href="/"
-            className="text-xl font-bold text-[var(--color-text)] hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-neutral-950 rounded"
+            className="text-xl font-normal text-[var(--color-text)] hover:opacity-70 transition-opacity focus:outline-none rounded"
             aria-label="Home"
           >
             {personalInfo.name}
@@ -52,7 +52,7 @@ export default function Header() {
                 key={link.path}
                 href={link.path}
                 onClick={(e) => handleNavClick(e, link.path)}
-                className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-neutral-950 rounded"
+                className="text-sm font-normal text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors focus:outline-none rounded"
               >
                 {link.name}
               </a>
@@ -61,7 +61,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="btn-primary"
+              className="btn-secondary text-sm"
             >
               Contact
             </a>

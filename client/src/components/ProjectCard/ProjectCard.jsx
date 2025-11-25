@@ -15,7 +15,7 @@ export default function ProjectCard({ project, index }) {
           <span>Project Image</span>
         </div>
       </div>
-      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+      <h3 className="text-xl font-normal mb-2">{project.title}</h3>
       <p className="text-[var(--color-text-muted)] mb-4 flex-grow leading-relaxed">
         {project.description}
       </p>
@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index }) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-neutral-950 rounded"
+            className="text-[var(--color-text)] hover:opacity-70 underline text-sm focus:outline-none rounded"
           >
             Live Demo →
           </a>

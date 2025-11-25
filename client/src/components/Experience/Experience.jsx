@@ -11,7 +11,7 @@ export default function Experience() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-12">Experience</h2>
+          <h2 className="mb-12 font-normal">Experience</h2>
           <div className="space-y-8">
             {experience.map((exp, index) => (
               <motion.div
@@ -24,8 +24,8 @@ export default function Experience() {
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold mb-1">{exp.title}</h3>
-                    <p className="text-primary font-medium">{exp.company}</p>
+                    <h3 className="text-xl font-normal mb-1">{exp.title}</h3>
+                    <p className="text-[var(--color-text-muted)]">{exp.company}</p>
                   </div>
                   <div className="text-sm text-[var(--color-text-muted)]">
                     <p>{exp.period}</p>
